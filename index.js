@@ -1,12 +1,13 @@
-import express from "express";
-import cors from "cors";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const { userRouter } = require('./routes/users.js');
+const { dataRouter } = require('./routes/data.js');
+const { convRouter } = require('./routes/conv.js');
 
-import { userRouter } from "./routes/users.js";
-import { dataRouter } from "./routes/data.js";
-import { convRouter } from "./routes/conv.js";
 const app = express();
+
 
 app.use(express.json());
 app.use(cors());
