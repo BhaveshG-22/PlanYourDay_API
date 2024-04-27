@@ -43,3 +43,7 @@ dotenv.config();
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `);
 });
+
+
+// Export the Express API
+module.exports = app
